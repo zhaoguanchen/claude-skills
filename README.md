@@ -1,17 +1,25 @@
-# WA Camping Search
+# Claude Skills
 
-自动搜索 [Washington State Parks](https://washington.goingtocamp.com/) 露营地空位，使用 Playwright 浏览器自动化。
+一个 [Claude Code](https://claude.ai/code) 自定义 skill 的集合，用于日常自动化任务。
 
-## 安装
+## Skills
+
+### `/camping-search` — Washington 露营地搜索
+
+自动搜索 [Washington State Parks](https://washington.goingtocamp.com/) 的露营地空位，使用 Playwright 浏览器自动化。
+
+**用法：**
+
+```
+/camping-search "Deception Pass" 6/13 6/14 2
+/camping-search "Deception Pass" 7/4 7/5 2 "1 Tent"
+```
+
+**手动运行：**
 
 ```bash
 npm install
 npx playwright install chromium
-```
-
-## 使用
-
-```bash
 node camping.js
 ```
 
@@ -21,8 +29,6 @@ node camping.js
 PARK="Deception Pass" ARRIVAL="June 13, 2026" DEPARTURE="June 14, 2026" PARTY_SIZE=2 EQUIPMENT="1 Tent" node camping.js
 ```
 
-## 参数
-
 | 环境变量 | 默认值 | 说明 |
 |---|---|---|
 | `PARK` | `Deception Pass` | 公园名称 |
@@ -31,10 +37,12 @@ PARK="Deception Pass" ARRIVAL="June 13, 2026" DEPARTURE="June 14, 2026" PARTY_SI
 | `PARTY_SIZE` | `2` | 人数 |
 | `EQUIPMENT` | `1 Tent` | 装备类型 |
 
-## Claude Code Skill
+---
 
-本项目包含 Claude Code `/camping-search` skill，可直接在 Claude Code 中调用：
+## 安装 Skills
 
-```
-/camping-search "Deception Pass" 6/13 6/14 2
+将 `.md` 文件复制到 Claude Code 的 commands 目录即可：
+
+```bash
+cp camping-search.md ~/.claude/commands/
 ```
