@@ -1,0 +1,12 @@
+{
+  "name": "wa-camping-search",
+  "version": "1.0.0",
+  "description": "Automated campsite search for Washington State Parks using Playwright",
+  "main": "camping.js",
+  "scripts": {
+    "search": "node camping.js"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
